@@ -1,19 +1,13 @@
-/* FONT */
-
 body{
     font-family: sans-serif;
 }
-
-
 form{
     width: 10%;
 }
-
-
 input{
     border-radius: 3px;
+    padding: 3px 5px;
 }
-
 .text-error{
     color: red;
     font-size: 0.8em;
@@ -22,4 +16,28 @@ input{
     border-style: solid;
     border-color: red;
     border-width: 1.5px;
+}
+form div{
+    margin-top: 0.5em;
+}
+.button{
+    background-color: #4cafad;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+form select{
+    background-color: #3d8b89;
+    border: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
 }
