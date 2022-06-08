@@ -2,9 +2,12 @@ body{
     font-family: sans-serif;
 }
 form{
-    width: 10%;
+    display: flex;
+    justify-content: center;
 }
 input{
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 3px;
     padding: 3px 5px;
 }
