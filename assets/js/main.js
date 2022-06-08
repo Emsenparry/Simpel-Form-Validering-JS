@@ -33,33 +33,25 @@ function validateForm(form) {
     
 
    
-function showError(elm, message = "Du skal udfylde feltet!") {
+function showError(elm, message = "Du skal udfylde feltet!") { //funktionen definere to parameter som er elm og message. 
     elm.classList.add('field-error')
     if (!elm.nextElementSibling) {
         elm.insertAdjacentHTML('afterend', `<span class="text-error">${message}</span>`) //InsertAdjacent betyder 'Tilstødene' det er noget der kommer rundt om tagget. 
-        elm.addEventListener('keypress', function () { //Eventlisteneren lytter på når brugeren taster i feltet (keypress).
+        elm.addEventListener('keypress', function () { //Eventlisteneren lytter på når brugeren taster i feltet (keypress). //Change bruges når du skal select en value. 
             if(elm.nextElementSibling){
                 elm.classList.remove('field-error'); //Remover klassen (borderen) fra input feltet.
                 elm.nextElementSibling.remove(); //Når man taster i feltet så forsvinder erroren. (Teksten)
-            }
+            }   
+        })
+        elm.addEventListener('change', function () { //Change bruges når du skal select en value. 
+            if(elm.nextElementSibling){
+                elm.classList.remove('field-error');
+                elm.nextElementSibling.remove(); 
+            }   
         })
     }
 
 }
-
-// function showError(elm, message = "Du skal vælge et køn!") { //funktionen definere to parameter som er elm og message. 
-//     elm.classList.add('field-error')
-//     if (!elm.nextElementSibling) {
-//         elm.insertAdjacentHTML('afterend', `<span class="text-error">${message}</span>`) //Du bruger det andet parameter for at ændre text-erroren i et andet felt.
-//         elm.addEventListener('change', function () { //Change bruges når du skal select en value. 
-//             if(elm.nextElementSibling){
-//                 elm.classList.remove('field-error'); 
-//                 elm.nextElementSibling.remove(); 
-//             }
-//         })
-//     }
-
-// }
 
 
 
