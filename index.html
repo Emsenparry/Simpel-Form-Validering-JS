@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpel form validering</title>
+    <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="assets/css/form.css">
+</head>
+<body>
+    
+    <form>
+        <fieldset>
+            <div>
+                <label for="firstname">Fornavn</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <div>
+                <label for="lastname">Efternavn</label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="gender"></label>
+                <select name="gender" id="gender">
+                    <option value="">Vælg dit køn</option>
+                    <option value="f">Kvinde</option>
+                    <option value="m">Mand</option>
+                </select>
+
+            </div>
+            <div>
+                <button type="button" onclick="validateForm(this.form)">Send</button> <!-- this.form referere over til den formular knappen står over i. -->
+                <button type="reset">Nulstil felter</button>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>

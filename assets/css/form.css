@@ -1,0 +1,27 @@
+/* FONT */
+
+body{
+    font-family: sans-serif;
+}
+
+
+form{
+    width: 10%;
+}
+/* fieldset{
+    box-shadow: 5px 4px 1px;
+} */
+
+input{
+    border-radius: 3px;
+}
+
+.text-error{
+    color: red;
+    font-size: 0.8em;
+}
+.field-error{
+    border-style: solid;
+    border-color: red;
+    border-width: 1.5px;
+}
