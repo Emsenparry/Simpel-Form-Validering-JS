@@ -19,7 +19,7 @@ function validateForm(form) {
         return false;
     }
     if (!form.gender.value) {
-        showError(form.gender);
+        showError(form.gender, "Du skal vælge et køn!");
         result = false;
         return false;
     }
@@ -33,10 +33,10 @@ function validateForm(form) {
     
 
    
-function showError(elm) {
+function showError(elm, message = "Du skal vælge et køn!") {
     elm.classList.add('field-error')
     if (!elm.nextElementSibling) {
-        elm.insertAdjacentHTML('afterend', `<span class="text-error">Du skal udfylde feltet!</span>`) //InsertAdjacent betyder 'Tilstødene' det er noget der kommer rundt om tagget. 
+        elm.insertAdjacentHTML('afterend', `<span class="text-error">${message}</span>`) //InsertAdjacent betyder 'Tilstødene' det er noget der kommer rundt om tagget. 
         elm.addEventListener('keypress', function () { //Eventlisteneren lytter på når brugeren taster i feltet (keypress).
             if(elm.nextElementSibling){
                 elm.classList.remove('field-error'); //Remover klassen (borderen) fra input feltet.
