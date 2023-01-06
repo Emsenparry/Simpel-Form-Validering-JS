@@ -21,7 +21,7 @@ input{
     border-width: 1.5px;
 }
 form div{
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 .button{
     background-color: #4cafad;
@@ -47,5 +47,5 @@ form select{
     cursor: pointer;
 }
 form select option{
-    background-color: #64b0ad;
+    background-color: #525757;
 }
